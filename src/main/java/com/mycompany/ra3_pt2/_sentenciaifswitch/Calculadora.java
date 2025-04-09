@@ -21,6 +21,9 @@ public class Calculadora {
         int operacio; //Varible de tipus int, per introduir el tipus d'operació
         //Varible de tipus double, per introduir el resultat de l'operació
         double resultat;
+        //Finals amb els valors pel switch i si és 0 el denominador
+        final int SUMA = 1, RESTA = 2, MULTIPLICACIO = 3, DIVISIO = 4,
+                DENOMINADOR_ERRORNI = 0;
         
         //Missatge per preguntar pel primer número
         System.out.print("Introdueix el primer valor: ");
@@ -43,22 +46,22 @@ public class Calculadora {
         
         //Switch per, segons el tipus d'operació, faci una cosa o altra
         switch (operacio) {
-            case 1: //Suma
+            case SUMA: //Suma
                 resultat = numero1 + numero2;
                 System.out.println("El resultat és: " + resultat);
                 break; //Per finatlitzar el switch
-            case 2: //Resta
+            case RESTA: //Resta
                 resultat = numero1 - numero2;
                 System.out.println("El resultat és: " + resultat);
                 break; //Per finatlitzar el switch
-            case 3: //Multiplicació
+            case MULTIPLICACIO: //Multiplicació
                 resultat = numero1 * numero2;
                 System.out.println("El resultat és: " + resultat);
                 break; //Per finatlitzar el switch
-            case 4: //Divisió
+            case DIVISIO: //Divisió
                 resultat = numero1 / numero2;
                 //If per veure si el segon número introduit és un 0
-                if (numero2 == 0){
+                if (numero2 == DENOMINADOR_ERRORNI){
                     /*
                         Missatge per indicar que la operació no es pot realitzar,
                         perquè és un 0
