@@ -19,6 +19,13 @@ public class NotaFinal {
         double seminaris;
         //Varible de tipus double, per introduir la nota de practiques
         double practiques;
+        //Final amb els valors de les ponderacions
+        final double PONDERACIO_TEORIA = 0.4, PONDERACIO_SEMINARIS = 0.3,
+                PONDERACIO_PRACTIQUES = 0.3;
+        final double NOTA_MIN_SUSPES = 0.0, NOTA_MAXIM_SUSPES = 4.99,
+                NOTA_MIN_APROVAT = 5.00, NOTA_MAX_APROVAT = 6.99,
+                NOTA_MIN_NOTABLE = 7.00, NOTA_MAX_NOTABLE = 8.49,
+                NOTA_MIN_EXCELENT = 8.50, NOTA_MAX_EXCELENT = 9.99;
         
         //Variable scanner per introduir dades a través del teclat
         Scanner sc = new Scanner(System.in);
@@ -39,20 +46,22 @@ public class NotaFinal {
             Variable de tipus double, on s'introdueix el resultat del càlcul de
             la mitjana de notes
         */
-        double notaFinal = 0.4 * teoria + 0.3 * seminaris + 0.3 * practiques;
+        double notaFinal = PONDERACIO_TEORIA * teoria +
+                PONDERACIO_SEMINARIS * seminaris +
+                PONDERACIO_PRACTIQUES * practiques;
         
         //If per comprovar si la nota final, és un supès
-        if (notaFinal >= 0.00 && notaFinal <= 4.99) {
+        if (notaFinal >= NOTA_MIN_SUSPES && notaFinal <= NOTA_MAXIM_SUSPES) {
             System.out.println("Has suspès. La teva nota és: " + notaFinal);
             //If per comprovar si la nota final, és un aprovat
-        } else if (notaFinal >= 5.00 && notaFinal <= 6.99) {
+        } else if (notaFinal >= NOTA_MIN_APROVAT && notaFinal <= NOTA_MAX_APROVAT) {
             System.out.println("Has aprovat. La teva nota és: " + notaFinal);
             //If per comprovar si la nota final, és un notable
-        } else if (notaFinal >= 7.00 && notaFinal <= 8.49) {
+        } else if (notaFinal >= NOTA_MIN_NOTABLE && notaFinal <= NOTA_MAX_NOTABLE) {
             System.out.println("Has tret un notable. La teva nota és: "
                     + notaFinal);
             //If per comprovar si la nota final, és un excel·lent
-        } else if (notaFinal >= 8.50 && notaFinal <= 9.99) {
+        } else if (notaFinal >= NOTA_MIN_EXCELENT && notaFinal <= NOTA_MAX_EXCELENT) {
             System.out.println("Has tret un excel·lent. La teva nota és: "
                     + notaFinal);
         } else {
