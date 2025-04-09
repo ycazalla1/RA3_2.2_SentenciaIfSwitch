@@ -19,9 +19,10 @@ public class NotaFinal {
         double seminaris;
         //Varible de tipus double, per introduir la nota de practiques
         double practiques;
-        //Final amb els valors de les ponderacions
+        //Finals amb els valors de les ponderacions
         final double PONDERACIO_TEORIA = 0.4, PONDERACIO_SEMINARIS = 0.3,
                 PONDERACIO_PRACTIQUES = 0.3;
+        //Finals de les notes
         final double NOTA_MIN_SUSPES = 0.0, NOTA_MAXIM_SUSPES = 4.99,
                 NOTA_MIN_APROVAT = 5.00, NOTA_MAX_APROVAT = 6.99,
                 NOTA_MIN_NOTABLE = 7.00, NOTA_MAX_NOTABLE = 8.49,

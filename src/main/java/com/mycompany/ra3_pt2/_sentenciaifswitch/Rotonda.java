@@ -17,6 +17,9 @@ public class Rotonda {
         Scanner sc = new Scanner(System.in);
         int carretera; //Varible de tipus int, per escollir la carretera
         int vehicle;//Varible de tipus int, per escollir vehicle
+        final int PRIMERA_SORTIDA = 1, SEGONA_SORTIDA = 2, TECERA_SORTIDA = 3,
+                QUARTA_SORTIDA = 4;
+        final int TURISME = 1, MOTO = 2, CICLO = 3, CAMIO_SUPERIOR_KG = 4;
         
         //Missatge on es pregunta per quina sortida vol anar
         System.out.println("Quina sortida vols escollir:");
@@ -38,7 +41,7 @@ public class Rotonda {
         
         //Switch per veure quina carretera s'ha triat
         switch (carretera) {
-            case 1: //Si s'ha triat la primera sortida
+            case PRIMERA_SORTIDA: //Si s'ha triat la primera sortida
                 System.out.println("Per aquesta sortida pots anar a: "
                         + "Mas Carolet / Ca la Guidó / Mas Cremat");
                 //Switch dins de cada sortdia per veure quin vehicle porta
@@ -47,15 +50,15 @@ public class Rotonda {
                         En cada Case, es fica el tipus de vehicle y segons la
                         sortida, pot passar o no
                     */
-                    case 1,2,3 -> System.out.println("Amb el teu vehicle pots"
-                            + " accedir.");
-                    case 4 -> System.out.println("Amb aquest vehicle no hi pots"
-                            + " accedir.");
+                    case TURISME,MOTO,CICLO -> System.out.println("Amb el teu"
+                            + "vehicle pots accedir.");
+                    case CAMIO_SUPERIOR_KG -> System.out.println("Amb aquest"
+                            + " vehicle no hi pots accedir.");
                     //Si no s'ha triat cap vehicle
                     default -> System.out.println("El valor introduit és erroni.");
                 }
                 break; //Per finatlitzar el switch
-            case 2: //Si s'ha triat la segona sortida
+            case SEGONA_SORTIDA: //Si s'ha triat la segona sortida
                System.out.println("Per aquesta sortida pots anar a: Blanes /"
                        + " Girona / Vic / Mataró / Barcelona");
                switch (vehicle) {
@@ -63,30 +66,30 @@ public class Rotonda {
                         En cada Case, es fica el tipus de vehicle y segons la
                         sortida, pot passar o no
                    */
-                    case 1,2,4 -> System.out.println("Amb el teu vehicle pots"
-                            + " accedir.");
-                    case 3 -> System.out.println("Amb aquest vehicle no hi pots"
-                            + " accedir.");
+                    case TURISME,MOTO,CAMIO_SUPERIOR_KG ->
+                        System.out.println("Amb el teu vehicle pots accedir.");
+                    case CICLO -> System.out.println("Amb aquest vehicle no hi"
+                            + " pots accedir.");
                     //Si no s'ha triat cap vehicle
                     default -> System.out.println("El valor introduit és erroni.");
                 }
                break; //Per finatlitzar el switch
-            case 3: //Si s'ha triat la tercera sortida
+            case TECERA_SORTIDA: //Si s'ha triat la tercera sortida
                 System.out.println("Per aquesta sortida pots anar a: Blanes platja");
                 switch (vehicle) {
                     /*
                         En cada Case, es fica el tipus de vehicle y segons la
                         sortida, pot passar o no
                     */
-                    case 1,2,3 -> System.out.println("Amb el teu vehicle pots"
-                            + " accedir.");
-                    case 4 -> System.out.println("Amb aquest vehicle no hi pots"
-                            + " accedir.");
+                    case TURISME,MOTO,CICLO -> System.out.println("Amb el teu"
+                            + " vehicle pots accedir.");
+                    case CAMIO_SUPERIOR_KG -> System.out.println("Amb aquest"
+                            + " vehicle no hi pots accedir.");
                     //Si no s'ha triat cap vehicle
                     default -> System.out.println("El valor introduit és erroni.");
                 }
                 break; //Per finatlitzar el switch
-            case 4: //Si s'ha triat la quarta sortida
+            case QUARTA_SORTIDA: //Si s'ha triat la quarta sortida
                 System.out.println("Per aquesta sortida pots anar a: "
                         + "Blanes nord / Lloret de Mar");
                 switch (vehicle) {
@@ -94,8 +97,8 @@ public class Rotonda {
                         En cada Case, es fica el tipus de vehicle y segons la
                         sortida, pot passar o no
                     */
-                    case 1,2,3,4 -> System.out.println("Amb el teu vehicle pots"
-                            + " accedir.");
+                    case TURISME,MOTO,CICLO,CAMIO_SUPERIOR_KG ->
+                        System.out.println("Amb el teu vehicle pots accedir.");
                     //Si no s'ha triat cap vehicle
                     default -> System.out.println("El valor introduit és erroni.");
                 }
