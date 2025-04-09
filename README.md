@@ -7,13 +7,14 @@
     Utilitza la sentència switch perquè l’usuari esculli una opció. En l’operació de divisió, has de tenir en compte que si el denominador és zero, l’operació no es podrà realitzar i s’haurà de mostrar un missatge d’error.
   </li>
   <li>
-    Feu un programa que calculi la nota final d’una assignatura. El programa ha de demanar a l’usuari que introdueixi les seves notes de teoria, seminaris i pràctiques i calcular la nota numèrica final segons la fórmula:
-    <div style="text-align: center">
+    <p>Feu un programa que calculi la nota final d’una assignatura. El programa ha de demanar a l’usuari que introdueixi les seves notes de teoria, seminaris i pràctiques i calcular la nota numèrica final segons la fórmula:</p>
+    <div>
       <b>
       Nota final = 0,4 x teoria + 0,3 x seminaris + 0,3 x pràctiques
     </b>
     </div>
-    Una vegada calculada la nota, el programa ha de donar la nota que li correspon segons el següent criteri:
+    <p>Una vegada calculada la nota, el programa ha de donar la nota que li correspon segons el següent criteri:</p>
+    
     Suspèsentre 0,00 i 4,99
     Aprovatentre 5,00 i 6,99
     Notableentre 7,00 i 8,49
